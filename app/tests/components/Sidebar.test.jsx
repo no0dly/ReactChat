@@ -4,10 +4,10 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils =  require('react-addons-test-utils');
 
-import Main from 'Main';
+import Sidebar from 'Sidebar';
 
-describe('Main component',() => {
+describe('Sidebar component',() => {
     it('Should exist', () => {
-        expect(Main).toExist();
+        expect(Sidebar).toExist();
     });
 });

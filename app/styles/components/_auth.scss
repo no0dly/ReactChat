@@ -1,0 +1,28 @@
+.auth {
+    .box {
+        background: $gray;
+    }
+    .control {
+        margin-bottom: 2rem;
+    }
+}
+
+.login-title {
+    margin-bottom: 1rem;
+}
+
+.login__wrap {
+    padding: 2rem 1.5rem;
+    background: $white;
+    border-radius: 10px;
+}
+
+.submit {
+    background: $orange;
+    transition: 0.3s;
+    color: $white;
+    &:hover {
+        color: $white;
+        background: darken($orange, 10%);
+    }
+}

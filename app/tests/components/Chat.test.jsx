@@ -4,10 +4,10 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils =  require('react-addons-test-utils');
 
-var Nav = require('Nav');
+import Chat from 'Chat';
 
-describe('Nav component',() => {
+describe('Chat page',() => {
     it('Should exist', () => {
-        expect(Nav).toExist();
+        expect(Chat).toExist();
     });
 });

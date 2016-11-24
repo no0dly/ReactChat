@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.chat-input {
+    margin-top: 1rem;
+}
+
+.messages {
+    overflow: auto;
+}

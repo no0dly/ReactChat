@@ -1,9 +1,9 @@
 var redux = require('redux');
-var {  } = require('reducers');
+var { loginReducer } = require('reducers');
 
 export var configure = (initialState = {}) => {
     var reducer = redux.combineReducers({
-
+        logged: loginReducer
     });
 
     var store = redux.createStore(reducer, initialState, redux.compose(

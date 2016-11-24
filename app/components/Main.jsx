@@ -1,17 +1,21 @@
 var React = require('react');
-var Nav = require('Nav');
 
-var App = (props) => {
-    return (
-        <div className="container is-fluid">
-            <Nav/>
-            <div className="container">
-                <div>
-                    {props.children}
+import Messages from 'Messages';
+import ChatInput from 'ChatInput';
+
+var Main = React.createClass({
+    render() {
+        return (
+            <div className="main">
+                <div className="messages">
+                    <Messages/>
+                </div>
+                <div className="chat-input">
+                    <ChatInput/>
                 </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+});
 
-module.exports = App;
+export default Main;

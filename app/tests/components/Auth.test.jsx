@@ -4,10 +4,10 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils =  require('react-addons-test-utils');
 
-import Main from 'Main';
+import Auth from 'Auth';
 
-describe('Main component',() => {
+describe('Auth component',() => {
     it('Should exist', () => {
-        expect(Main).toExist();
+        expect(Auth).toExist();
     });
 });

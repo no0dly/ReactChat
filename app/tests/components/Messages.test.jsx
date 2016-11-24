@@ -4,10 +4,10 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils =  require('react-addons-test-utils');
 
-import Main from 'Main';
+import Messages from 'Messages';
 
-describe('Main component',() => {
+describe('Messages component',() => {
     it('Should exist', () => {
-        expect(Main).toExist();
+        expect(Messages).toExist();
     });
 });

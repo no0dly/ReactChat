@@ -4,10 +4,10 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils =  require('react-addons-test-utils');
 
-import Main from 'Main';
+import ChatInput from 'ChatInput';
 
-describe('Main component',() => {
+describe('ChatInput component',() => {
     it('Should exist', () => {
-        expect(Main).toExist();
+        expect(ChatInput).toExist();
     });
 });
