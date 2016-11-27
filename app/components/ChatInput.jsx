@@ -1,22 +1,27 @@
 var React = require('react');
-import socket from 'wsAPI';
+var {connect} = require('react-redux');
 
 var ChatInput = React.createClass({
     onSubmit(e) {
         e.preventDefault();
+        var message = this.message.value;
+        var {token} = this.props;
 
-        socket.request('sentMessage', {body: 'bla bla'}).then(function(data) {
-            console.log(data);
-        }, function(data) {
-            console.log(data)
-        });
+        var req = {
+        	op: 'message',
+        	token,
+        	data: {
+        		body: message
+        	}
+        };
+        window.ws.send(JSON.stringify(req));
     },
     render() {
         return (
             <form onSubmit={this.onSubmit}>
                 <div className="control is-grouped">
                     <div className="control is-expanded">
-                        <input className="input" type="text" placeholder="Enter text"/>
+                        <input className="input" type="text" placeholder="Enter text" ref={(input) => {this.message = input} }/>
                     </div>
                     <div className="control">
                         <button className="button submit">
@@ -31,4 +36,10 @@ var ChatInput = React.createClass({
     }
 });
 
-export default ChatInput;
+export default connect(
+    (state) => {
+        return {
+            token: state.user.token
+        }
+    }
+)(ChatInput);
