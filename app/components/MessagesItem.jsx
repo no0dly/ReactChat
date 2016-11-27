@@ -4,7 +4,7 @@ var moment = require('moment');
 var MessagesItem = React.createClass({
     render() {
         var {user, body, time} = this.props;
-        var formatedTime = moment.unix(time).format('MMM D, YY @ h:mm a');
+        var formatedTime = moment(time).format('MMM D, YY @ h:mm a');
         return (
             <li className="message">
                 <div className="media">

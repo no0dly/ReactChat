@@ -15,6 +15,7 @@ var ChatInput = React.createClass({
         	}
         };
         window.ws.send(JSON.stringify(req));
+        this.message.value = '';
     },
     render() {
         return (

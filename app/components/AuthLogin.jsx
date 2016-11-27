@@ -36,11 +36,13 @@ var AuthLogin = React.createClass({
                     dispatch(actions.login());
                     dispatch(actions.setUser(data.name, data.login, response.token));
                     dispatch(actions.getInitialMessages(response.messages));
+                    document.querySelector('.message:last-child').scrollIntoView(true);
                     break;
 
                 case 'message':
 
                     dispatch(actions.addMessage(response.user, response.body, response.time));
+                    document.querySelector('.message:last-child').scrollIntoView(true);
                     break;
 
                 default:
