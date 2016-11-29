@@ -1,10 +1,12 @@
 var React = require('react');
 
+import UserInfo from 'UserInfo';
+
 var Sidebar = React.createClass({
     render() {
         return (
             <div className="sidebar">
-                Sidebar component
+                <UserInfo/>
             </div>
         );
     }
