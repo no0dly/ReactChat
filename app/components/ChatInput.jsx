@@ -1,5 +1,6 @@
 var React = require('react');
 var {connect} = require('react-redux');
+import websockets from 'app/websockets';
 
 var ChatInput = React.createClass({
     onSubmit(e) {
@@ -14,7 +15,7 @@ var ChatInput = React.createClass({
         		body: message
         	}
         };
-        window.ws.send(JSON.stringify(req));
+        websockets().send(JSON.stringify(req));
         this.message.value = '';
     },
     render() {

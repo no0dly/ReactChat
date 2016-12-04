@@ -6,7 +6,6 @@ var actions    = require('actions');
 var store      = require('configureStore').configure();
 
 import Chat from 'Chat';
-import socket from 'wsAPI';
 
 store.subscribe(()=> {
     var state = store.getState();

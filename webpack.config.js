@@ -24,9 +24,10 @@ module.exports = {
         modulesDirectories: [
             'node_modules',
             './app/components',
-            './app/api'
+            './app/websockets'
         ],
         alias: {
+            app: 'app',
             AppCss: 'app/styles/app.scss',
             actions: 'app/actions/actions.jsx',
             reducers: 'app/reducers/reducers.jsx',
